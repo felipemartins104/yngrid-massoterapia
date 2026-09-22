@@ -85,6 +85,10 @@ section{padding:clamp(56px,9vw,104px) 0}
 .brand small{display:block;font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-top:3px}
 .topbar .btn{min-height:44px;padding:10px 20px;font-size:.95rem;box-shadow:none}
 .topbar .btn svg{width:20px;height:20px}
+.topbar-nav{display:flex;align-items:center;gap:22px}
+.topbar-link{display:none;font-weight:700;font-size:.95rem;text-decoration:none;color:var(--brown-2);border-bottom:2px solid transparent}
+.topbar-link:hover{border-color:var(--caramel)}
+@media (min-width:640px){.topbar-link{display:inline-block}}
 
 /* Hero */
 .hero{padding-top:clamp(36px,6vw,72px);background:radial-gradient(900px 500px at 90% -10%,var(--sand) 0,transparent 60%),var(--cream);overflow:hidden}
@@ -159,6 +163,20 @@ section{padding:clamp(56px,9vw,104px) 0}
 .creds{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:24px 0 28px}
 .creds li{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--sand);border-radius:999px;font-weight:700;font-size:.95rem}
 .creds svg{width:18px;height:18px;color:var(--sage)}
+
+/* Empresas */
+.corporate{background:var(--sage);color:#fff}
+.corporate h2{color:#fff}
+.corporate .eyebrow{color:var(--gold)}
+.corporate .lead{color:#e7ecdf}
+.corporate .checks span{color:#dfe6d6}
+.corporate .checks svg{color:var(--gold)}
+.corporate .micro{color:#cdd8c1}
+.corp-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:700;margin-bottom:18px}
+.corp-badge svg{width:16px;height:16px}
+.corp-panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:30px}
+.corp-panel h3{color:var(--gold);font-size:1.35rem}
+.corp-panel p{color:#e7ecdf;margin:0}
 
 /* Prova social */
 .proof-grid{display:grid;gap:18px;margin-top:40px}
@@ -277,9 +295,12 @@ footer .disc{font-size:.82rem;color:#a8967f;max-width:75ch}
       <svg aria-hidden="true"><use href="#i-lotus"/></svg>
       <span>Yngrid Santos<small>Massoterapia</small></span>
     </a>
-    <a class="btn" href="https://wa.me/5585991500948?text=Ol%C3%A1%2C%20Yngrid!%20Vi%20seu%20Instagram%20e%20quero%20agendar%20uma%20sess%C3%A3o%20de%20massoterapia%20em%20domic%C3%ADlio." target="_blank" rel="noopener" data-cta="topo" aria-label="Agendar no WhatsApp">
-      <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Agendar</span>
-    </a>
+    <nav class="topbar-nav">
+      <a class="topbar-link" href="#empresas">Para empresas</a>
+      <a class="btn" href="https://wa.me/5585991500948?text=Ol%C3%A1%2C%20Yngrid!%20Vi%20seu%20Instagram%20e%20quero%20agendar%20uma%20sess%C3%A3o%20de%20massoterapia%20em%20domic%C3%ADlio." target="_blank" rel="noopener" data-cta="topo" aria-label="Agendar no WhatsApp">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Agendar</span>
+      </a>
+    </nav>
   </div>
 </header>
 
@@ -445,6 +466,30 @@ footer .disc{font-size:.82rem;color:#a8967f;max-width:75ch}
       <a class="btn" href="https://wa.me/5585991500948?text=Ol%C3%A1%2C%20Yngrid!%20Vi%20seu%20Instagram%20e%20quero%20agendar%20uma%20sess%C3%A3o%20de%20massoterapia%20em%20domic%C3%ADlio." target="_blank" rel="noopener" data-cta="sobre">
         <svg aria-hidden="true"><use href="#i-wa"/></svg>Quero agendar com a Yngrid
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- EMPRESAS -->
+<section class="corporate" id="empresas" aria-labelledby="h-empresas">
+  <div class="container solution-grid">
+    <div>
+      <span class="corp-badge"><svg aria-hidden="true"><use href="#i-home"/></svg>Atendimento para empresas</span>
+      <h2 id="h-empresas">Sua empresa também pode oferecer esse cuidado</h2>
+      <p class="lead">Leve a massoterapia para o ambiente de trabalho: uma pausa de bem-estar para a equipe, em ações pontuais ou recorrentes, combinada direto com a Yngrid.</p>
+      <ul class="checks">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Redução do estresse da rotina</b><span>Sessões rápidas que aliviam a tensão acumulada no dia a dia de trabalho.</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Mais disposição para a equipe</b><span>Um cuidado que o time sente na prática, dentro da própria empresa.</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Frequência combinada com você</b><span>Ação única, mensal ou recorrente: o formato é definido junto com a empresa.</span></div></li>
+      </ul>
+      <a class="btn btn--light" href="https://wa.me/5585991500948?text=Ol%C3%A1%2C%20Yngrid!%20Sou%20de%20uma%20empresa%20e%20quero%20saber%20sobre%20atendimento%20de%20massoterapia%20para%20os%20colaboradores." target="_blank" rel="noopener" data-cta="empresas">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg>Quero levar a Yngrid para minha empresa
+      </a>
+      <p class="micro">Conversa direta com a Yngrid pelo WhatsApp para combinar formato, horários e valores.</p>
+    </div>
+    <div class="corp-panel">
+      <h3>Como funciona para empresas</h3>
+      <p>Você conta o número de colaboradores, o local e a data desejada. A Yngrid organiza a agenda de atendimentos individuais dentro do horário combinado com a empresa.</p>
     </div>
   </div>
 </section>
